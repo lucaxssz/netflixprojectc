@@ -1,0 +1,78 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 30px;
+  background-color: rgb(17, 17, 17);
+  color: #fff;
+}
+
+h1 {
+  font-size: 45px;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.profile:hover .name {
+  color: #fff;
+}
+
+.profile:hover img {
+  outline: 2px solid #fff;
+}
+
+.profile img {
+  width: 130px;
+  height: 130px;
+  border-radius: 5px;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(105, 105, 105);
+}
+
+.profiles {
+  width: 150px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 10px;
+  padding: 7px;
+  border-radius: 2px;
+  border: 1.5px solid rgb(105, 105, 105);
+  margin: 5px white;
+  background-color: rgb(17, 17, 17);
+  color: rgb(105, 105, 105);
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+  }
+}

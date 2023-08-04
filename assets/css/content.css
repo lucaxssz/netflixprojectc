@@ -1,0 +1,287 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(17, 17, 17);
+  color: #fff;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  top: 0%;
+  width: 100%;
+  z-index: 10;
+  padding: 0 30px;
+  background-color: transparent;
+  transition: ease .5s;
+}
+
+.nav-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-left img {
+  width: 120px;
+  height: 70px;
+}
+
+.nav-left span:first-child {
+  font-weight: 300;
+}
+
+.nav-left span:last-child {
+  font-weight: 600;
+}
+
+.nav-rigth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-rigth img {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+}
+nav span {
+  cursor: pointer;
+}
+.movie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 102vh;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.movie img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+}
+.gradienteBottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgb(17, 17, 17));
+}
+
+.gradienteTop {
+  position: absolute;
+  top: -5px;
+  width: 100%;
+  height: 35px;
+  background: linear-gradient(rgb(17, 17, 17), rgba(0, 0, 0, 0));
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  left: 7%;
+}
+
+.container .title {
+  font-size: 100px;
+  line-height: 100px;
+  font-family: "Shadows Into Light", cursive;
+}
+
+.and {
+  color: #e50914;
+}
+
+.container a {
+  width: max-content;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  margin-top: 10px;
+  gap: 5px;
+  padding: 5px 25px 5px 15px;
+  border-radius: 3px;
+  background: #fff;
+  color: #000;
+}
+
+/* Trends */
+
+.upEfect {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-bottom: 20px;
+  transform: translateY(-80px);
+}
+
+.trendsTitle {
+  margin-left: 25px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.containerFilms {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: scroll;
+  padding: 0 25px;
+  padding-bottom: 5px;
+}
+
+.containerFilms::-webkit-scrollbar {
+  height: 5px;
+}
+
+.containerFilms::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.containerFilms::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+}
+
+.Films {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.Films img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+/* Imagens Principal Mobile e Desktop */
+
+@media (min-width: 800px) {
+  .Films img:last-child {
+    padding-right: 25px;
+  }
+
+  .ImgDesktop {
+    display: flex;
+  }
+
+  .spanDesktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .ImgMobile {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .ImgDesktop {
+    display: none;
+  }
+
+  .spanDesktop {
+    display: none;
+  }
+
+  .ImgMobile {
+    display: flex;
+  }
+
+  /* Navigation */
+  nav {
+    padding: 0 15px;
+  }
+
+  .nav-left img {
+    width: 100px;
+    height: 60px;
+  }
+
+  .nav-rigth {
+    gap: 10px;
+  }
+
+  .nav-rigth img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .nav-rigth span {
+    font-size: 25px;
+  }
+
+  /* Principal */
+
+  .movie {
+    height: 100vh;
+  }
+
+  .container {
+    gap: 10px;
+    left: 5%;
+    top: 34%;
+  }
+
+  .container .title {
+    font-size: 70px;
+    line-height: 60px;
+    font-family: "Shadows Into Light", cursive;
+  }
+
+  .container .description {
+    font-size: 15px;
+  }
+}
